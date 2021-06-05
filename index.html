@@ -56,14 +56,7 @@
                     <div class="col-lg-6 black-bg">
                         <div class="user-img text-center d-flex align-items-end h-100 justify-content-center">
                         <div>
-                            <div>
-                                <p><span style="color: #33cc66;">Social</span></p>
-                                <p><span style="color: #00ccbb;"><a style="color: #00ccbb;" href="https://www.instagram.com/oyehamza120/">Instagram</a></span></p>
-                                <p><span style="color: #00ccbb;"><a style="color: #00ccbb;" href="https://www.facebook.com/oyehamza120.page">Facebook</a></span></p>
-                                <p><span style="color: #00ccbb;"><a style="color: #00ccbb;" href="https://twitter.com/oyehamza120">Twitter</a></span></p>
-                                <p><span style="color: #00ccbb;"><a style="color: #00ccbb;" href="https://oyehamza120.club">Website</a></span></p>
-                                <p><span style="color: #00ccbb;"><a style="color: #00ccbb;" href="https://fiverr.com/oyehamza120">Fiverr</a></span></p>
-                                </div>                        </div>
+                        </div>
                         <img src="static/img/HamzaShabbir.png" title="Dev-Oyehamza120" alt="Dev-Oyehamza120">
                         </div>
                     </div>
@@ -469,6 +462,130 @@
             <button class="menu-button"><span>Menu</span></button>
         </div>
     </header>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        * {box-sizing: border-box;}
+        
+        /* Button used to open the chat form - fixed at the bottom of the page */
+        .click {
+          background-color: rgb(58, 82, 92);
+          color: white;
+          padding: 16px 20px;
+          border: none;
+          cursor: pointer;
+          opacity: 0.8;
+          position: fixed;
+          bottom: 23px;
+          right: 28px;
+          width: 150px;
+        }
+        
+        /* The popup chat - hidden by default */
+        .chat-popup {
+          display: none;
+          position: fixed;
+          bottom: 0;
+          right: 15px;
+          border: 2px solid #f1f1f16e;
+          z-index: 9;
+        }
+        
+        /* Add styles to the form container */
+        .form-container {
+          max-width: 180px;
+          padding: 10px;
+          background-color: rgb(68, 67, 67);
+        }
+        
+        /* Full-width textarea */
+        .form-container textarea {
+          width: 100%;
+          padding: 15px;
+          margin: 5px 0 22px 0;
+          border: none;
+          background: #f1f1f169;
+          resize: none;
+          min-height: 150px;
+        }
+        
+        /* When the textarea gets focus, do something */
+        .form-container textarea:focus {
+          background-color: rgba(221, 221, 221, 0.432);
+          outline: none;
+        }
+        
+        /* Set a style for the submit/send button */
+        .form-container .btn {
+          background-color: #04AA6D;
+          color: white;
+          padding: 16px 20px;
+          border: none;
+          cursor: pointer;
+          width: 100%;
+          margin-bottom:10px;
+          opacity: 0.8;
+        }
+        /* Add a red background color to the cancel button */
+        .form-container .facebook-square {
+          background-color: rgb(72, 167, 230);
+        }
+        /* Add a red background color to the cancel button */
+        .form-container .instagram {
+          background-color: rgb(220, 48, 226);
+        }
+        /* Add a red background color to the cancel button */
+        .form-container .twitter {
+          background-color: rgb(51, 152, 247);
+        }
+        
+        /* Add a red background color to the cancel button */
+        .form-container .fiverr {
+          background-color: rgb(49, 136, 96);
+        }
+        /* Add a red background color to the cancel button */
+        .form-container .close {
+          background-color: rgb(255, 0, 0);
+        }
+        
+        /* Add some hover effects to buttons */
+        .form-container .btn:hover, .open-button:hover {
+          opacity: 1;
+        }
+        </style>
+        </head>
+        <body>
+        
+        <button class="btn click" onclick="openForm()">More Accounts</button>
+        
+        <div class="chat-popup" id="myForm">
+          <div class="form-container">
+        
+            <label for="msg"><b>More accounts</b></label>
+        
+            <button type="button" class="btn fiverr"><a href="https://fiverr.com/oyehamza120">Fiverr</a></button>
+            <button type="button" class="btn facebook-square"><a href="https://www.facebook.com/oyehamza120.page"> Facebook</a></button>
+            <button type="button" class="btn instagram"><a href="https://instagram.com/oyehamza120"> Instagram</a></button>
+            <button type="button" class="btn twitter"><a href="https://twitter.com/oyehamza120"> Twitter</a></button>
+        
+            <button type="button" class="btn close" onclick="closeForm()">Close</button>
+          </div>
+        </div>
+        
+        <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+        }
+        
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+        </script>
+        
+        </body>
+        
+        
     <script src="static/js/jquery-3.3.1.slim.min.js"></script>
     <script src="static/plugin/bootstrap/js/popper.min.js"></script>
     <script src="static/plugin/bootstrap/js/bootstrap.min.js"></script>
