@@ -53,6 +53,7 @@
         <div class="header-large-title">
             <h1 class="title">Components</h1>
         </div>
+        
         <div class="error-page">
             
             <h1 class="title">Coming Soon!</h1>
@@ -60,6 +61,83 @@
                 We are developing some free web apps for you.
             </div>
         </div>
+           <div id="appCapsule">
+
+        <!-- .non-mobile-detection -->
+        <div class="section mt-2 non-mobile-detection">
+            <div class="card text-center">
+                <div class="card-body p-5">
+                    <h5 class="card-title">Not a Mobile Device</h5>
+                    <p class="card-text">
+                        You are currently browsing from computer. Try it on your mobile device. This box only
+                        visible when browsing from non mobile device.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- .ios-detection -->
+        <div class="section mt-2 ios-detection">
+            <div class="card text-center">
+                <div class="card-body p-5">
+                    <h5 class="card-title">iOS Detected</h5>
+                    <p class="card-text">
+                        You can see this box because you are browsing from an iOS device.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- .android-detection -->
+        <div class="section mt-2 android-detection">
+            <div class="card text-center">
+                <div class="card-body p-5">
+                    <h5 class="card-title">Android Detected</h5>
+                    <p class="card-text">
+                        You can see this box because you are browsing from an Android device.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- .windowsphone-detection -->
+        <div class="section mt-2 windowsphone-detection">
+            <div class="card text-center">
+                <div class="card-body p-5">
+                    <h5 class="card-title">Windows Phone Detected</h5>
+                    <p class="card-text">
+                        You can see this box because you are browsing from a Windows Phone device.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section full mt-3 mb-2">
+            <div class="section-title">Detail of your device and browser!</div>
+            <div id="example"></div>
+            <script type="text/javascript">
+            txt = "<p>Browser CodeName: " + navigator.appCodeName + "</p>";
+            txt+= "<p>Browser Name: " + navigator.appName + "</p>";
+            txt+= "<p>Browser Version: " + navigator.appVersion + "</p>";
+            txt+= "<p>Cookies Enabled: " + navigator.cookieEnabled + "</p>";
+            txt+= "<p>Platform: " + navigator.platform + "</p>";
+            txt+= "<p>User-agent header: " + navigator.userAgent + "</p>";
+            document.getElementById("example").innerHTML=txt;
+            </script>
+            <script type="application/javascript">
+              function getIP(json) {
+                document.write("My public IP address is: ", json.ip);
+              }
+            </script>
+            
+            <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+        </div>
+        
+
+    </div>
+    <!-- * App Capsule -->
+
 
        <!-- app footer -->
        <div class="appFooter">
